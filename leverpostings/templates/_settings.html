@@ -1,0 +1,12 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+	first:        true,
+	label:        "Lever account"|t,
+	id:           'leverId',
+	name:         'leverId',
+	instructions: "Lever username to get listings for"|t,
+	value:        settings.leverId,
+	autofocus:    true,
+	errors:       settings.getErrors('leverId')
+}) }}
